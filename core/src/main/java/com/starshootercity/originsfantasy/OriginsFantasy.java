@@ -26,7 +26,7 @@ public class OriginsFantasy extends OriginsAddon {
                 new BreathStorer(),
                 new Chime(),
                 new DoubleHealth(),
-                new DragonFireball(),
+                new DragonFireballAbility(),
                 new Elegy(),
                 new EndCrystalHealing(),
                 new EndBoost(),
@@ -75,18 +75,6 @@ public class OriginsFantasy extends OriginsAddon {
 
     private static void initializeNMSInvoker() {
         nmsInvoker = switch (Bukkit.getMinecraftVersion()) {
-            case "1.19" -> new FantasyNMSInvokerV1_19();
-            case "1.19.1" -> new FantasyNMSInvokerV1_19_1();
-            case "1.19.2" -> new FantasyNMSInvokerV1_19_2();
-            case "1.19.3" -> new FantasyNMSInvokerV1_19_3();
-            case "1.19.4" -> new FantasyNMSInvokerV1_19_4();
-            case "1.20" -> new FantasyNMSInvokerV1_20();
-            case "1.20.1" -> new FantasyNMSInvokerV1_20_1();
-            case "1.20.2" -> new FantasyNMSInvokerV1_20_2();
-            case "1.20.3" -> new FantasyNMSInvokerV1_20_3();
-            case "1.20.4" -> new FantasyNMSInvokerV1_20_4();
-            case "1.20.5" -> new FantasyNMSInvokerV1_20_5();
-            case "1.20.6" -> new FantasyNMSInvokerV1_20_6();
             case "1.21" -> new FantasyNMSInvokerV1_21();
             default -> throw new IllegalStateException("Unexpected version: " + Bukkit.getMinecraftVersion() + " only versions 1.20 - 1.20.6 are supported");
         };

@@ -6,6 +6,8 @@ import com.starshootercity.abilities.AbilityRegister;
 import com.starshootercity.abilities.VisibleAbility;
 import net.kyori.adventure.key.Key;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.DragonFireball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -14,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class DragonFireball implements VisibleAbility, Listener {
+public class DragonFireballAbility implements VisibleAbility, Listener {
     @Override
     public @NotNull List<OriginSwapper.LineData.LineComponent> getDescription() {
         return OriginSwapper.LineData.makeLineFor("You can right click whilst holding a sword to launch a dragon's fireball, with a cooldown of 20 seconds.", OriginSwapper.LineData.LineComponent.LineType.DESCRIPTION);
@@ -39,7 +41,7 @@ public class DragonFireball implements VisibleAbility, Listener {
             for (Material material : MaterialTags.SWORDS.getValues()) {
                 event.getPlayer().setCooldown(material, 300);
             }
-            DragonFireball fireball = event.getPlayer().launchProjectile(org.bukkit.entity.DragonFireball.class);
+            DragonFireball fireball = event.getPlayer().launchProjectile(DragonFireball.class);
             fireball.setGlowing(true);
             fireball.setShooter(event.getPlayer());
         });

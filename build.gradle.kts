@@ -19,18 +19,6 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":version"))
     implementation(project(":1.21", "reobf"))
-    implementation(project(":1.20.6", "reobf"))
-    implementation(project(":1.20.5", "reobf"))
-    implementation(project(":1.20.4", "reobf"))
-    implementation(project(":1.20.3", "reobf"))
-    implementation(project(":1.20.2", "reobf"))
-    implementation(project(":1.20.1", "reobf"))
-    implementation(project(":1.20", "reobf"))
-    implementation(project(":1.19", "reobf"))
-    implementation(project(":1.19.1", "reobf"))
-    implementation(project(":1.19.2", "reobf"))
-    implementation(project(":1.19.3", "reobf"))
-    implementation(project(":1.19.4", "reobf"))
 }
 
 tasks {
