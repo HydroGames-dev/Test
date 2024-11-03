@@ -26,7 +26,7 @@ public class OriginsFantasy extends OriginsAddon {
                 new BreathStorer(),
                 new Chime(),
                 new DoubleHealth(),
-                new DragonFireball(),
+                new DragonFireballAbility(),
                 new Elegy(),
                 new EndCrystalHealing(),
                 new EndBoost(),
