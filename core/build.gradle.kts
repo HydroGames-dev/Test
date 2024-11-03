@@ -14,7 +14,7 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.19-R0.1-SNAPSHOT")
     compileOnly(project(":version"))
     compileOnly(project(":1.21"))
-    compileOnly(files("libs/Origins-Reborn-2.2.14-all.jar"))
+    compileOnly(files("libs/Origins-Reborn-2.3.25-all.jar"))
 }
 
 java {

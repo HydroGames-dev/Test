@@ -39,11 +39,16 @@ public class FantasyNMSInvokerV1_21 extends FantasyNMSInvoker {
                 .filter(e -> e.getType().equals(effect.getType()))
                 .findFirst()
                 .orElse(null);
-                int currentAmplifier = currentEffect != null ? currentEffect.getAmplifier() : -1;
-                if (currentAmplifier < 2) {
-                    arrow.addCustomEffect(
-                        effect.withDuration(effect.getDuration()).withAmplifier(currentAmplifier + 1), true
-                    );
+                if (currentEffect == null) {
+                    arrow.addCustomEffect(effect.withDuration(effect.getDuration()-20).withAmplifier(effect.getAmplifier()), true);
+                } else {
+                    int currentAmplifier = (currentEffect != null) ? currentEffect.getAmplifier() : -1;
+                    int duration = (effect.isShorterThan(currentEffect)) ? currentEffect.getDuration(): effect.getDuration();
+                    if (currentAmplifier < 2) {
+                        arrow.addCustomEffect(
+                            effect.withDuration(duration).withAmplifier(currentAmplifier + 1), true
+                        );
+                    }
                 }
             }
         }
